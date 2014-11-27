@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<MileageTracker.Models.TripModel>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Trips";
 }
 
 <h2>Index</h2>
@@ -26,6 +26,9 @@
         <th>
             @Html.DisplayNameFor(model => model.Purpose)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Employee)
+        </th>
         <th></th>
     </tr>
 
@@ -45,6 +48,9 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Purpose)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Employee.Id)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
